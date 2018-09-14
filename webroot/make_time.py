@@ -8,15 +8,17 @@ simple script that returns and HTML page with the current time
 
 import datetime
 
-time_str = datetime.datetime.now().isoformat()
 
-html = """
-<http>
-<body>
-<h2> The time is: </h2>
-<p> %s <p>
-</body>
-</http>
-""" % time_str
+def html_make_time():
+    time_str = datetime.datetime.now().isoformat()
 
-print(html)
+    html = b"""
+    <http>
+    <body>
+    <h2> The time is: </h2>
+    <p> %s <p>
+    </body>
+    </http>
+    """ % time_str
+
+    return html
